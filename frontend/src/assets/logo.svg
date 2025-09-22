@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="60" viewBox="0 0 300 60" fill="none">
+  <!-- Calendar Icon Background -->
+  <rect x="2" y="3" rx="8" ry="8" width="40" height="40" fill="#0a4a84"/>
+
+  <!-- Calendar Shape -->
+  <rect x="7" y="8" width="30" height="30" fill="none" stroke="#ffffff" stroke-width="2" rx="2" ry="2"/>
+  <rect x="11" y="5" width="3" height="8" fill="#ffffff"/>
+  <rect x="32" y="5" width="3" height="8" fill="#ffffff"/>
+
+  <!-- Medical Cross -->
+  <rect x="20" y="16" width="3" height="12" fill="#ffffff"/>
+  <rect x="15" y="20.5" width="12" height="3" fill="#ffffff"/>
+
+  <!-- Logo Text -->
+  <text x="50" y="22" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="bold" fill="#0a4a84">MediAppoint</text>
+
+  <!-- Dashboard Panel Text -->
+  <text x="50" y="42" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="normal" fill="#0a4a84">Dashboard Panel</text>
+</svg>
