@@ -21,19 +21,15 @@ const Navbar = () => {
       <ul className='hidden md:flex items-start gap-5 font-medium'>
         <NavLink to='/'>
           <li className='py-1'>Home</li>
-          <hr className='border-none outline-none h-0.5 bg-blue-brand w-3/5 m-auto hidden' />
         </NavLink>
         <NavLink to='/doctors'>
           <li className='py-1'>ALL DOCTORS</li>
-          <hr className='border-none outline-none h-0.5 bg-blue-brand w-3/5 m-auto hidden' />
         </NavLink>
         <NavLink to='/about'>
           <li className='py-1'>ABOUT</li>
-          <hr className='border-none outline-none h-0.5 bg-blue-brand w-3/5 m-auto hidden' />
         </NavLink>
         <NavLink to='/contact'>
           <li className='py-1'>CONTACT</li>
-          <hr className='border-none outline-none h-0.5 bg-blue-brand w-3/5 m-auto hidden' />
         </NavLink>
       </ul>
 
@@ -53,10 +49,10 @@ const Navbar = () => {
               </div>
             </div>
           ) : (
-            <div className="relative">
+            <div className="relative hidden md:block">
               <button
                 onClick={() => setShowDropdown(!showDropdown)}
-                className='bg-blue-brand text-white px-8 py-3 rounded-full font-light hidden md:block'
+                className='bg-blue-brand text-white px-8 py-3 rounded-full font-light'
               >
                 Login Options
               </button>
@@ -97,6 +93,26 @@ const Navbar = () => {
             <NavLink onClick={() => setShowMenu(false)} to='/doctors'><p className='px-4 py-2 rounded inline-block'>ALL DOCTORS</p></NavLink>
             <NavLink onClick={() => setShowMenu(false)} to='/about'><p className='px-4 py-2 rounded inline-block'>ABOUT</p></NavLink>
             <NavLink onClick={() => setShowMenu(false)} to='/contact'><p className='px-4 py-2 rounded inline-block'>CONTACT</p></NavLink>
+
+            {/* Show login options when logged out */}
+            {!token && (
+              <>
+                <p
+                  onClick={() => { setShowMenu(false); navigate('login'); }}
+                  className="px-4 py-2 rounded inline-block hover:bg-gray-100 cursor-pointer"
+                >
+                  Create Account
+                </p>
+                <a
+                  href="https://medappoint-3fwh.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded inline-block hover:bg-gray-100 cursor-pointer"
+                >
+                  Admin Login
+                </a>
+              </>
+            )}
           </ul>
         </div>
       </div>
